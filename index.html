@@ -2,16 +2,28 @@
 <html>
   <head>
     <title>DrunkenCircles</title>
+
+    <style>
+      html, body, canvas {
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
   </head>
 
   <body>
-    <canvas width="500" height="500"></canvas>
+    <canvas></canvas>
 
     <script src="javascripts/circle.js"></script>
     <script src="javascripts/game.js"></script>
     <script>
-        var canvas = document.getElementsByTagName("canvas")[0];
-        new Circles.Game(500, 500, 10).start(canvas);
+      var canvasEl = document.getElementsByTagName("canvas")[0];
+      canvasEl.height = window.innerHeight;
+      canvasEl.width = window.innerWidth;
+      new Circles.Game(
+        canvasEl.width,
+        canvasEl.width
+      ).start(canvasEl);
     </script>
   </body>
 </html>

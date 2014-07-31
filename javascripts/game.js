@@ -1,15 +1,19 @@
 (function () {
   var Circles = window.Circles = (window.Circles || {});
 
-  var Game = Circles.Game = function Game (xDim, yDim, numCircles) {
+  var Game = Circles.Game = function Game (xDim, yDim) {
     this.xDim = xDim;
     this.yDim = yDim;
 
     this.circles = [];
-    for (var i = 0; i < numCircles; ++i) {
-      this.circles.push(Circles.Circle.randomCircle(xDim, yDim));
+    for (var i = 0; i < Game.NUM_CIRCLES; ++i) {
+      this.circles.push(
+        Circles.Circle.randomCircle(xDim, yDim, Game.NUM_CIRCLES)
+      );
     }
   };
+
+  Game.NUM_CIRCLES = 4000;
 
   Game.prototype.render = function (ctx) {
     ctx.clearRect(0, 0, this.xDim, this.yDim);
@@ -35,6 +39,6 @@
     window.setInterval((function () {
       this.moveCircles();
       this.render(ctx);
-    }).bind(this), 100);
+    }).bind(this), 60 / 1000);
   };
 })();

@@ -8,13 +8,12 @@
     this.color = color;
   };
 
-  Circle.MAX_RADIUS = 25;
 
-  Circle.randomCircle = function (maxX, maxY) {
+  Circle.randomCircle = function (maxX, maxY, numCircles) {
     return new Circle(
       maxX * Math.random(),
       maxY * Math.random(),
-      Circle.MAX_RADIUS * Math.random(),
+      Circle.radius(maxX, maxY, numCircles),
       Circle.randomColor()
     );
   };
@@ -29,12 +28,18 @@
     return color;
   };
 
+  Circle.radius = function (maxX, maxY, numCircles) {
+    var targetCircleArea = (maxX * maxY) / numCircles;
+    var targetRadius = Math.sqrt(targetCircleArea / Math.PI);
+    return 2 * targetRadius;
+  };
+
   Circle.prototype.moveRandom = function (maxX, maxY) {
     var dx = (Math.random() * 2) - 1;
     var dy = (Math.random() * 2) - 1;
 
-    this.centerX = Math.abs((this.centerX + (dx * this.radius)) % maxX);
-    this.centerY = Math.abs((this.centerY + (dy * this.radius)) % maxY);
+    this.centerX = Math.abs((this.centerX + (dx * this.radius * 0.1)) % maxX);
+    this.centerY = Math.abs((this.centerY + (dy * this.radius) * 0.1) % maxY);
   };
 
   Circle.prototype.render = function (ctx) {
