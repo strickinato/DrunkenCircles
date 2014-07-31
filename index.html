@@ -1,60 +1,15 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="DrunkenCircles : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+<head>
     <title>DrunkenCircles</title>
-  </head>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/appacademy-demos/DrunkenCircles">View on GitHub</a>
-
-          <h1 id="project_title">DrunkenCircles</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/appacademy-demos/DrunkenCircles/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/appacademy-demos/DrunkenCircles/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>&lt;!DOCTYPE html&gt;
-
-</p>
-    DrunkenCircles<pre><code>&lt;script src="circles.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    var canvas = document.getElementsByTagName("canvas")[0];
-    new Circles.Game(500, 500, 10).start(canvas);
-&lt;/script&gt;
-</code></pre>
-
-<p>
-</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">DrunkenCircles maintained by <a href="https://github.com/appacademy-demos">appacademy-demos</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+    <script src="circles.js"></script>
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+        new Circles.Game(500, 500, 10).start(canvas);
+    </script>
+</body>
 </html>
