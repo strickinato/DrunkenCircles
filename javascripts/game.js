@@ -1,5 +1,7 @@
 (function () {
-  var Circles = window.Circles = (window.Circles || {});
+  if (typeof Circles === "undefined") {
+    window.Circles = {};
+  }
 
   var Game = Circles.Game = function Game (xDim, yDim) {
     this.xDim = xDim;

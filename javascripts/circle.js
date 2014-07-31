@@ -1,5 +1,7 @@
 (function () {
-  var Circles = window.Circles = (window.Circles || {});
+  if (typeof Circles === "undefined") {
+    window.Circles = {};
+  }
 
   var Circle = Circles.Circle = function Circle (centerX, centerY, radius, color) {
     this.centerX = centerX;
