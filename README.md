@@ -8,5 +8,5 @@
 
 [live-demo]: http://appacademy.github.io/DrunkenCircles/
 [index.html]: https://github.com/appacademy/DrunkenCircles/blob/gh-pages/index.html
-[circle.js]: https://github.com/appacademy/DrunkenCircles/blob/gh-pages/javascripts/circle.js
-[game.js]: https://github.com/appacademy/DrunkenCircles/blob/gh-pages/javascripts/game.js
+[circle.js]: https://github.com/appacademy/DrunkenCircles/blob/gh-pages/lib/circle.js
+[game.js]: https://github.com/appacademy/DrunkenCircles/blob/gh-pages/lib/game.js
