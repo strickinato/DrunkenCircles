@@ -1,4 +1,4 @@
-# DrunkenCircles
+# w6d1: DrunkenCircles Demo
 
 **[Live Demo][live-demo]**
 
